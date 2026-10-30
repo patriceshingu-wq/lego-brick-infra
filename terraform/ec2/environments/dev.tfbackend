@@ -1,0 +1,8 @@
+# Backend settings for the dev state file. The bucket name is added at init:
+#   terraform init -reconfigure \
+#     -backend-config=environments/dev.tfbackend \
+#     -backend-config="bucket=$(terraform -chdir=../backend output -raw state_bucket)"
+key            = "ec2/dev/terraform.tfstate"
+region         = "us-east-1"
+dynamodb_table = "zero2ai-terraform-locks"
+encrypt        = true

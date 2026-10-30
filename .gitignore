@@ -1,0 +1,5 @@
+# Never commit SSH private keys or Terraform state.
+*.pem
+*.tfstate
+*.tfstate.*
+.terraform/
